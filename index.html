@@ -1,4 +1,4 @@
-index.<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,16 @@ index.<!DOCTYPE html>
     <title>EduResource Hub</title>
     <!-- Bootstrap 5.1.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    	
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Bonus: Apple Touch Icon (For extra faux-legitimacy) -->
+    <link rel="apple-touch-icon" href="images/favicon.png">    
+
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar">
     <!-- Navigation -->
@@ -34,108 +42,458 @@ index.<!DOCTYPE html>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>                    
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="d-flex align-items-center">
-        <div class="container text-center">
-            <h1 class="display-4">Welcome to EduResource Hub</h1>
-            <p class="lead">Your gateway to quality educational materials</p>
-            <a href="#introduction" class="btn btn-primary btn-lg">Get Started</a>
-        </div>
-    </section>
+	<!-- Home Section -->
+	<section id="home" class="hero-section" data-aos="fade-down" data-aos-delay="100">
+	    <div class="container h-100">
+	        <div class="row h-100 align-items-center">
+	            <div class="col-lg-8 text-white">
+	                <h1 class="display-4 fw-bold" data-aos="zoom-in" data-aos-delay="300">Welcome to EduResource Hub</h1>
+	                <p class="lead mb-4">Your gateway to quality educational materials</p>
+	                <a href="#introduction" class="btn btn-primary btn-lg px-4 me-2">Get Started</a>
+	                <a href="#featured" class="btn btn-outline-light btn-lg px-4">Explore</a>
+	            </div>
+	        </div>
+	    </div>
+	</section>
 
-    <!-- Introduction Section -->
-    <section id="introduction" class="bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2>About This Resource Hub</h2>
-                    <p class="lead">Discover curated educational materials for all learning levels and subjects.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+	<section id="introduction" class="py-5 bg-white">
+	    <div class="container" data-aos="fade-right" data-aos-delay="100">
+	        <div class="row justify-content-center">
+	            <div class="col-lg-10 text-center">
+	                <h2 class="display-5 fw-bold mb-4">About This Resource Hub</h2>
+	                <p class="lead text-muted mb-5">
+	                    A curated collection of high-quality educational materials designed to empower learners, educators, and lifelong knowledge seekers.
+	                </p>
+	                
+	                <div class="row g-4">
+	                    <!-- Feature 1 -->
+	                    <div class="col-md-4" data-aos="fade-up">
+	                        <div class="p-4 bg-light rounded-3 h-100">
+	                            <div class="mb-3 text-primary">
+	                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+	                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+	                                </svg>
+	                            </div>
+	                            <h4 class="h5">Expert-Curated</h4>
+	                            <p>All resources are vetted by educators and subject-matter experts to ensure accuracy and pedagogical value.</p>
+	                        </div>
+	                    </div>
+	                    
+	                    <!-- Feature 2 -->
+	                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+	                        <div class="p-4 bg-light rounded-3 h-100">
+	                            <div class="mb-3 text-primary">
+	                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+	                                    <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM8.5 4h6l.5.667V5H1v-.333L1.5 4h6V1h1v3Z"/>
+	                                </svg>
+	                            </div>
+	                            <h4 class="h5">Multi-Format</h4>
+	                            <p>From interactive simulations to printable worksheets, we support diverse learning styles and needs.</p>
+	                        </div>
+	                    </div>
+	                    
+	                    <!-- Feature 3 -->
+	                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+	                        <div class="p-4 bg-light rounded-3 h-100">
+	                            <div class="mb-3 text-primary">
+	                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+	                                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+	                                </svg>
+	                            </div>
+	                            <h4 class="h5">Always Free</h4>
+	                            <p>Committed to open education, all resources are free to access with no paywalls or subscriptions.</p>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+	                <div class="mt-5 pt-4 border-top">
+	                    <p class="mb-4">
+	                        Founded in 2023, our hub bridges gaps in educational access by aggregating the best free learning materials from trusted institutions like <strong>Khan Academy</strong>, <strong>MIT OpenCourseWare</strong>, and <strong>UNESCO</strong>.
+	                    </p>
+	                    <a href="#mission" class="btn btn-outline-primary">Learn About Our Mission</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
 
-    <!-- Featured Section -->
-    <section id="featured" class="bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Featured Resources</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Interactive Math Tutorials</h5>
-                            <p class="card-text">Engaging math resources for K-12 students.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more featured items -->
-            </div>
-        </div>
-    </section>
+	<section id="featured" class="py-5 bg-light">
+	    <div class="container">
+	        <div class="text-center mb-5">
+	            <h2 class="display-5 fw-bold">Featured Resources</h2>
+	            <p class="lead text-muted">Top picks for effective learning</p>
+	        </div>
+
+	        <div class="row g-4">
+	            <!-- Resource 1 -->
+	            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+	                <div class="card h-100 border-0 shadow-sm">
+	                    <div class="card-img-top bg-primary bg-opacity-10 p-4 text-center">
+	                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#0d6efd" viewBox="0 0 16 16">
+	                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+	                            <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+	                            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+	                            <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+	                        </svg>
+	                    </div>
+	                    <div class="card-body">
+	                        <div class="d-flex mb-2">
+	                            <span class="badge bg-primary bg-opacity-10 text-primary me-2">Math</span>
+	                            <span class="badge bg-success bg-opacity-10 text-success">Interactive</span>
+	                        </div>
+	                        <h3 class="h5">Algebra Fundamentals</h3>
+	                        <p class="text-muted">Master linear equations through gamified practice problems with instant feedback.</p>
+	                        <ul class="list-unstyled">
+	                            <li class="mb-1"><small>⏱️ 15-20 min lessons</small></li>
+	                            <li><small>🧑‍🎓 Grades 6-9</small></li>
+	                        </ul>
+	                    </div>
+	                    <div class="card-footer bg-transparent border-0">
+	                        <a href="#" class="btn btn-outline-primary w-100">Explore Resource</a>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <!-- Resource 2 -->
+	            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+	                <div class="card h-100 border-0 shadow-sm">
+	                    <div class="card-img-top bg-warning bg-opacity-10 p-4 text-center">
+	                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fd7e14" viewBox="0 0 16 16">
+	                            <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.937 3 8 3s-2.254 1.176-3.568 2.638C3.122 7.096 2 8.345 2 10a6 6 0 0 0 6 6zM8 1s1.753.003 3.467 1.95c1.673 1.917 2.533 4.098 2.533 7.05a7 7 0 1 1-14 0c0-2.952.86-5.133 2.533-7.05C6.247 1.003 8 1 8 1z"/>
+	                            <path d="M8 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+	                        </svg>
+	                    </div>
+	                    <div class="card-body">
+	                        <div class="d-flex mb-2">
+	                            <span class="badge bg-danger bg-opacity-10 text-danger me-2">Science</span>
+	                            <span class="badge bg-info bg-opacity-10 text-info">Video Series</span>
+	                        </div>
+	                        <h3 class="h5">Chemistry Lab Simulations</h3>
+	                        <p class="text-muted">Virtual experiments covering titration, chromatography, and reaction kinetics.</p>
+	                        <ul class="list-unstyled">
+	                            <li class="mb-1"><small>🔬 12 Lab Modules</small></li>
+	                            <li><small>🎓 High School/College</small></li>
+	                        </ul>
+	                    </div>
+	                    <div class="card-footer bg-transparent border-0">
+	                        <a href="#" class="btn btn-outline-primary w-100">Start Experiment</a>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <!-- Resource 3 -->
+	            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+	                <div class="card h-100 border-0 shadow-sm">
+	                    <div class="card-img-top bg-success bg-opacity-10 p-4 text-center">
+	                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#198754" viewBox="0 0 16 16">
+	                            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+	                        </svg>
+	                    </div>
+	                    <div class="card-body">
+	                        <div class="d-flex mb-2">
+	                            <span class="badge bg-dark bg-opacity-10 text-dark me-2">Literacy</span>
+	                            <span class="badge bg-purple bg-opacity-10 text-purple">Printable</span>
+	                        </div>
+	                        <h3 class="h5">Reading Comprehension Kit</h3>
+	                        <p class="text-muted">Leveled passages with guided questions and vocabulary builders.</p>
+	                        <ul class="list-unstyled">
+	                            <li class="mb-1"><small>📚 3 Difficulty Levels</small></li>
+	                            <li><small>👧 Grades 2-5</small></li>
+	                        </ul>
+	                    </div>
+	                    <div class="card-footer bg-transparent border-0">
+	                        <a href="#" class="btn btn-outline-primary w-100">Download PDF</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="text-center mt-5">
+	            <a href="#categories-section" class="btn btn-primary px-4">View All Resources</a>
+	        </div>
+	    </div>
+	</section>
 
     <!-- Categories Section -->
-    <section id="categories-section" class="bg-white">
-        <div class="container">
-            <h2 class="text-center mb-5">Resource Categories</h2>
-            <div id="categories" class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card category-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Science</h5>
-                            <p class="card-text">Biology, Chemistry, Physics resources</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more categories -->
-            </div>
-        </div>
-    </section>
+	<section id="categories-section" class="py-5 bg-white">
+	    <div class="container">
+	        <div class="text-center mb-5">
+	            <h2 class="display-5 fw-bold">Resource Categories</h2>
+	            <p class="lead text-muted">Organized by subject and learning level</p>
+	        </div>
+
+	        <div id="categories" class="row g-4">
+	            <!-- Category 1 -->
+	            <div class="col-md-6 col-lg-3" data-aos="fade-up">
+	                <div class="card border-0 shadow-sm h-100">
+	                    <div class="card-body text-center">
+	                        <div class="mb-3 text-primary">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+	                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+	                                <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+	                                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+	                                <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+	                            </svg>
+	                        </div>
+	                        <h3 class="h5">Mathematics</h3>
+	                        <p class="text-muted">From arithmetic to calculus</p>
+	                        <ul class="list-unstyled small">
+	                            <li>🔢 120+ Algebra resources</li>
+	                            <li>📐 80+ Geometry tools</li>
+	                        </ul>
+	                        <a href="#" class="btn btn-sm btn-outline-primary mt-2">Explore</a>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <!-- Category 2 -->
+	            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+	                <div class="card border-0 shadow-sm h-100">
+	                    <div class="card-body text-center">
+	                        <div class="mb-3 text-danger">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+	                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.937 3 8 3s-2.254 1.176-3.568 2.638C3.122 7.096 2 8.345 2 10a6 6 0 0 0 6 6zM8 1s1.753.003 3.467 1.95c1.673 1.917 2.533 4.098 2.533 7.05a7 7 0 1 1-14 0c0-2.952.86-5.133 2.533-7.05C6.247 1.003 8 1 8 1z"/>
+	                                <path d="M8 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+	                            </svg>
+	                        </div>
+	                        <h3 class="h5">Science</h3>
+	                        <p class="text-muted">Discover the natural world</p>
+	                        <ul class="list-unstyled small">
+	                            <li>🧪 90+ Chemistry labs</li>
+	                            <li>🧬 60+ Biology modules</li>
+	                        </ul>
+	                        <a href="#" class="btn btn-sm btn-outline-danger mt-2">Explore</a>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <!-- Category 3 -->
+	            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+	                <div class="card border-0 shadow-sm h-100">
+	                    <div class="card-body text-center">
+	                        <div class="mb-3 text-success">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+	                                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+	                            </svg>
+	                        </div>
+	                        <h3 class="h5">Literacy</h3>
+	                        <p class="text-muted">Reading & writing mastery</p>
+	                        <ul class="list-unstyled small">
+	                            <li>📖 150+ Reading passages</li>
+	                            <li>✍️ 40 Writing workshops</li>
+	                        </ul>
+	                        <a href="#" class="btn btn-sm btn-outline-success mt-2">Explore</a>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <!-- Category 4 -->
+	            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+	                <div class="card border-0 shadow-sm h-100">
+	                    <div class="card-body text-center">
+	                        <div class="mb-3 text-warning">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+	                                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+	                                <path d="M9 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+	                            </svg>
+	                        </div>
+	                        <h3 class="h5">Computer Science</h3>
+	                        <p class="text-muted">Coding & digital literacy</p>
+	                        <ul class="list-unstyled small">
+	                            <li>💻 70+ Python tutorials</li>
+	                            <li>🌐 30 Web development kits</li>
+	                        </ul>
+	                        <a href="#" class="btn btn-sm btn-outline-warning mt-2">Explore</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
 
     <!-- Sample Resources -->
-    <section id="resources" class="bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Sample Resources</h2>
-            <div class="row">
-                <!-- Resource cards here -->
-            </div>
-        </div>
-    </section>
+	<section id="resources" class="py-5 bg-light">
+	    <div class="container">
+	        <div class="text-center mb-5">
+	            <h2 class="display-5 fw-bold">Sample Resources</h2>
+	            <p class="lead text-muted">Try these free materials today</p>
+	        </div>
+
+	        <div class="row g-4">
+	            <!-- Resource 1 -->
+	            <div class="col-md-6" data-aos="fade-up">
+	                <div class="card border-0 shadow-sm h-100">
+	                    <div class="row g-0">
+	                        <div class="col-md-4 bg-primary bg-opacity-10 d-flex align-items-center justify-content-center">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#0d6efd" viewBox="0 0 16 16">
+	                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+	                                <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+	                                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+	                                <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+	                            </svg>
+	                        </div>
+	                        <div class="col-md-8">
+	                            <div class="card-body">
+	                                <h3 class="h5">Fraction Visualizer</h3>
+	                                <p>Interactive tool to visualize fraction operations with pie/bar charts.</p>
+	                                <div class="d-flex justify-content-between align-items-center">
+	                                    <span class="badge bg-primary">Grades 3-5</span>
+	                                    <a href="#" class="btn btn-sm btn-primary">Try Online</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <!-- Resource 2 -->
+	            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+	                <div class="card border-0 shadow-sm h-100">
+	                    <div class="row g-0">
+	                        <div class="col-md-4 bg-success bg-opacity-10 d-flex align-items-center justify-content-center">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#198754" viewBox="0 0 16 16">
+	                                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+	                            </svg>
+	                        </div>
+	                        <div class="col-md-8">
+	                            <div class="card-body">
+	                                <h3 class="h5">Reading Fluency Passages</h3>
+	                                <p>Timed reading exercises with comprehension checks.</p>
+	                                <div class="d-flex justify-content-between align-items-center">
+	                                    <span class="badge bg-success">Grades 2-4</span>
+	                                    <a href="#" class="btn btn-sm btn-success">Download</a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
 
     <!-- About Section -->
-    <section id="about" class="bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-center mb-4">About Us</h2>
-                    <div id="mission" class="mb-5">
-                        <h3>Our Mission</h3>
-                        <p>To provide accessible educational resources for learners worldwide.</p>
-                    </div>
-                    <div id="contact">
-                        <h3>Contact Us</h3>
-                        <address>
-                            Email: <a href="mailto:info@eduresource.com">info@eduresource.com</a><br>
-                            Phone: (123) 456-7890
-                        </address>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+	<section id="about" class="py-5 bg-white">
+	    <div class="container">
+	        <div class="row align-items-center">
+	            <div class="col-lg-6 mb-4 mb-lg-0">
+	                <h2 class="display-5 fw-bold mb-4">About EduResource Hub</h2>
+	                <p class="lead">Democratizing access to quality education since 2023.</p>
+	                <p>Founded by a team of educators and technologists, we bridge gaps in educational equity by aggregating the best free learning resources from trusted providers worldwide.</p>
+	            </div>
+	            <div class="col-lg-6">
+	                <div class="ratio ratio-16x9">
+	                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="About Us" allowfullscreen></iframe>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div id="mission" class="row mt-5 pt-4 border-top">
+	            <div class="col-md-4 mb-4 mb-md-0">
+	                <div class="text-center p-3 bg-light rounded-3 h-100">
+	                    <h3 class="h4">Open Access</h3>
+	                    <p>All resources remain perpetually free with no paywalls or subscriptions.</p>
+	                </div>
+	            </div>
+	            <div class="col-md-4 mb-4 mb-md-0">
+	                <div class="text-center p-3 bg-light rounded-3 h-100">
+	                    <h3 class="h4">Quality First</h3>
+	                    <p>Every resource is vetted by subject-matter experts.</p>
+	                </div>
+	            </div>
+	            <div class="col-md-4">
+	                <div class="text-center p-3 bg-light rounded-3 h-100">
+	                    <h3 class="h4">Universal Design</h3>
+	                    <p>Materials support diverse learning needs and abilities.</p>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="py-5 bg-light">
+	    <div class="container">
+	        <div class="row justify-content-center">
+	            <div class="col-lg-8 text-center">
+	                <h2 class="display-5 fw-bold mb-4">Get In Touch</h2>
+	                <p class="lead mb-5">Have questions or suggestions? We'd love to hear from you!</p>
+	                
+	                <div class="row g-4">
+	                    <div class="col-md-4" data-aos="fade-up">
+	                        <div class="p-3">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0d6efd" viewBox="0 0 16 16">
+	                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+	                            </svg>
+	                            <h3 class="h5 mt-2">Email</h3>
+	                            <a href="mailto:info@eduresource.com">info@eduresource.com</a>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+	                        <div class="p-3">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0d6efd" viewBox="0 0 16 16">
+	                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+	                            </svg>
+	                            <h3 class="h5 mt-2">Phone</h3>
+	                            <a href="tel:+11234567890">(123) 456-7890</a>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+	                        <div class="p-3">
+	                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0d6efd" viewBox="0 0 16 16">
+	                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+	                            </svg>
+	                            <h3 class="h5 mt-2">Location</h3>
+	                            <address class="mb-0">123 Education Blvd<br>San Francisco, CA</address>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2023 EduResource Hub. All rights reserved.</p>
-        </div>
-    </footer>
+	<footer class="bg-dark text-white py-4">
+	    <div class="container">
+	        <div class="row align-items-center">
+	            <div class="col-md-6 mb-3 mb-md-0">
+	                <h3 class="h5 mb-2">EduResource Hub</h3>
+	                <p class="small mb-0">© 2025 All rights reserved</p>
+	            </div>
+	            <div class="col-md-6 text-md-end">
+	                <a href="#" class="text-white me-3"><small>Privacy Policy</small></a>
+	                <a href="#" class="text-white me-3"><small>Terms of Service</small></a>
+	                <a href="#" class="text-white"><small>Accessibility</small></a>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- AOS JS -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	  // Initialize AOS
+	  AOS.init({
+	    duration: 800,      // Animation duration (ms)
+	    easing: 'ease-in-out', // Absurdly smooth
+	    once: true,         // Only animate once
+	    mirror: false,      // No reflection (unlike your life choices)
+	    disable: 'mobile'   // Disable on mobile if performance is bad
+	  });
+	</script>    
 </body>
 </html>
